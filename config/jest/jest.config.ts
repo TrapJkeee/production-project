@@ -19,6 +19,7 @@ export default {
         'json',
         'node',
     ],
+    rootDir: '../../',
     moduleDirectories: [
         'node_modules',
     ],
@@ -29,12 +30,15 @@ export default {
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
-    rootDir: '../../',
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '.+\\.svg?.+$': path.resolve(__dirname, 'JestEmptyComponent.tsx'),
+        // '.+\\.svg?.+$': 'production-project/config/jest/JestEmptyComponent.tsx',
     },
+    // transform: {
+    //     // '^.+\\.svg$': 'jest-svg-transformer',
+    // },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -171,7 +175,6 @@ export default {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: undefined,
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [
