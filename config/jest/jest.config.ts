@@ -34,8 +34,11 @@ export default {
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         // '.+\\.svg?.+$': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-        '.+\\.svg?.+$': '<rootDir>/config/jest/jestEmptyComponent.tsx',
+        '.+\\.svg?.+$': '<rootDir>config/jest/jestEmptyComponent.tsx',
     },
+    // transform: {
+    //     // '^.+\\.svg$': 'jest-svg-transformer',
+    // },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -172,7 +175,6 @@ export default {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: undefined,
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [
